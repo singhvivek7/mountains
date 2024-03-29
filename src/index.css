@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+body {
+  @apply font-primary;
+}
+
+.hero-wrapper {
+  @apply h-dvh w-full bg-[url(src/assets/hero.png)] bg-top bg-cover flex justify-center items-center relative z-[-1];
+
+  &::before {
+    @apply content-[''] absolute inset-0 z-0 lg:z-10 bg-[url(src/assets/mountain.png)] bg-top bg-cover opacity-95;
+  }
+}
+
+.swiper-slide {
+  @apply flex justify-center items-center;
+}
